@@ -1,0 +1,146 @@
+<!--
+1) Quali sono i tipi primitivi principali in TypeScript?
+
+string
+
+number
+
+boolean
+
+null
+
+undefined
+
+bigint
+
+symbo
+
+2) Tre variabili tipizzate
+const nome: string = "EPICODE";
+const eta: number = 25;
+const studiandoTS: boolean = true;
+
+3) Tipizza il parametro della funzione greet
+const greet = (name: string) => {
+  return "Ciao " + name;
+};
+
+4) Tipo di ritorno della funzione sum
+const sum = (a: number, b: number): number => {
+  return a + b;
+};
+
+5) Funzione che restituisce prezzo con IVA al 22%
+const prezzoConIVA = (prezzo: number): number => {
+  return prezzo * 1.22;
+};
+
+6) Funzione che concatena due stringhe e restituisce la lunghezza
+const concatLength = (a: string, b: string): number => {
+  return (a + b).length;
+};
+
+7) Cos'è un Type Union e come si scrive?
+
+Un union type permette a una variabile di contenere più tipi possibili.
+Si scrive usando |.
+
+Esempio:
+
+let value: string | number;
+
+
+8) Variabile che può contenere numero, null o undefined
+let variabile: number | null | undefined;
+
+9) Tipo per i giorni della settimana
+type Giorno = 
+  "lunedi" |
+  "martedi" |
+  "mercoledi" |
+  "giovedi" |
+  "venerdi" |
+  "sabato" |
+  "domenica";
+
+  10) Tipizzare array di numeri nei due modi possibili
+const numbers: number[] = [1, 2, 3];
+
+11) Tupla con 5 elementi: 3 stringhe e 2 numeri
+const tupla: [string, string, string, number, number] = 
+  ["a", "b", "c", 1, 2];
+
+  12) Differenza tra type e interface
+
+interface viene usata soprattutto per descrivere oggetti ed è estendibile anche più volte.
+
+type è più generale: può rappresentare union, primitive personalizzate, funzioni, tuple, ecc. Non può essere esteso più volte (ma può usare &).
+
+13) Interfaccia con firstname, lastname e age
+interface Persona {
+  firstname: string;
+  lastname: string;
+  age: number;
+}
+
+14) Interfaccia utente con email obbligatoria e telefono opzionale
+interface Utente {
+  email: string;
+  telefono?: string;
+}
+
+15) Array tipizzato di oggetti "Studente"
+interface Studente {
+  nome: string;
+  voto: number;
+}
+
+const studenti: Studente[] = [
+  { nome: "Mario", voto: 28 },
+  { nome: "Anna", voto: 30 }
+];
+
+16) Interfaccia base "Veicolo" e estesa per creare "Auto"
+interface Veicolo {
+  marca: string;
+  modello: string;
+}
+
+interface Auto extends Veicolo {
+  porte: number;
+}
+
+17) Oggetto che implementa l'interfaccia Auto
+const miaAuto: Auto = {
+  marca: "Fiat",
+  modello: "Panda",
+  porte: 5
+};
+
+18) Cosa sono i Generics in TypeScript?
+
+I Generics permettono di creare componenti (funzioni, classi, interfacce) riutilizzabili, lasciando che il tipo venga specificato al momento dell’uso.
+
+Esempio:
+
+function box<T>(value: T): T {
+  return value;
+}
+
+19) È possibile avere più tipi generici in un'interfaccia?
+
+Sì, basta separarli con virgole.
+
+Esempio:
+
+interface Coppia<A, B> {
+  primo: A;
+  secondo: B;
+}
+
+20) Interfaccia generica per una risposta API
+interface ApiResponse<T> {
+  data: T;
+  success: boolean;
+  message?: string;
+} -->
